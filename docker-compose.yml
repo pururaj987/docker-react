@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - /usr/app/node_modules
+      # used to map every file and folder from current working directory to every file and folder inside /usr/app
+      - .:/usr/app
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /usr/app/node_modules
+      - .:/usr/app
+    command: ["npm", "run", "test"]

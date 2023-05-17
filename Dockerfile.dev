@@ -1,0 +1,13 @@
+#Specifying the base image
+FROM node:14-alpine
+
+# Specifying the working directory inside the base image
+WORKDIR /usr/app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+CMD ["npm" , "run" , "start"]
