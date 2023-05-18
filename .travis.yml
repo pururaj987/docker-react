@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t puru/docker-react .
+  - docker build -t puru/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true puru/docker-react npm run test
