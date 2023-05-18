@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>hi There</p>
+        <p>hi There , I made a change from feature branch</p>
         <a
           className="App-link"
           href="https://reactjs.org"
