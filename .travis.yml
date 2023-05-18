@@ -7,7 +7,7 @@ before_install:
   - docker build -t puru/docker-react .
 
 script:
-  - docker run -e CI=true puru/docker-react
+  - docker run -e CI=true puru/docker-react npm run test
 
 deploy:
   provider: elasticbeanstalk
